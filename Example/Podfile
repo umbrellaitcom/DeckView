@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DeckView_Example' do
+  pod 'DeckView', :path => '../'
+
+  target 'DeckView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
