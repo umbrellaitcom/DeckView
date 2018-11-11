@@ -1,0 +1,16 @@
+PODS:
+  - DeckView (0.1.0)
+
+DEPENDENCIES:
+  - DeckView (from `../`)
+
+EXTERNAL SOURCES:
+  DeckView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DeckView: 8b319d3675e8a196ebca826dbda085abfa29878a
+
+PODFILE CHECKSUM: acc1e3783b4f65c7e62f7f406da1cf9eaa2fc901
+
+COCOAPODS: 1.5.3

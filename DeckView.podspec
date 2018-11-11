@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DeckView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DeckView.'
+  s.summary          = 'An another Tinder like DeckView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+
                        DESC
 
-  s.homepage         = 'https://github.com/AlekseyPakAA/DeckView'
+  s.homepage         = 'https://github.com/umbrellaitcom/DeckView.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'AlekseyPakAA' => 'alexey.pak@umbrella-web.com' }
-  s.source           = { :git => 'https://github.com/AlekseyPakAA/DeckView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/umbrellaitcom/DeckView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
+  s.swift_version    = '4.2'
 
   s.ios.deployment_target = '8.0'
 

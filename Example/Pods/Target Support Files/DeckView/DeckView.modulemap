@@ -1,0 +1,6 @@
+framework module DeckView {
+  umbrella header "DeckView-umbrella.h"
+
+  export *
+  module * { export * }
+}

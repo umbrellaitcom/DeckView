@@ -1,0 +1,22 @@
+{
+  "name": "DeckView",
+  "version": "0.1.0",
+  "summary": "A short description of DeckView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AlekseyPakAA/DeckView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AlekseyPakAA": "alexey.pak@umbrella-web.com"
+  },
+  "source": {
+    "git": "https://github.com/AlekseyPakAA/DeckView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DeckView/Classes/**/*"
+}
