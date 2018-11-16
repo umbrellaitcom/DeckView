@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		26D5AA11C859767E1DF705E3D7E8F7F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		3746F5326922DC676EF0DE6D80F40080 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		43F94937219EA64900C7AE7D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94933219EA64900C7AE7D /* CardView.swift */; };
+		43F94938219EA64900C7AE7D /* CardViewsPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94934219EA64900C7AE7D /* CardViewsPull.swift */; };
+		43F94939219EA64900C7AE7D /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94935219EA64900C7AE7D /* DeckView.swift */; };
+		43F9493A219EA64900C7AE7D /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F94936219EA64900C7AE7D /* Geometry.swift */; };
 		5761CFCDF6B760A127DE99B61FD6F8A1 /* DeckView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40193E88BEF60199D7C1EA8CFCCF1C8B /* DeckView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CB2A03FF7B8B45A6050130F97D3BC0E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF8CC760FFA31C378808E6C3891F36 /* ReplaceMe.swift */; };
 		6F272E81A3298534C20122F9FA2179A2 /* Pods-DeckView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F8319A796F5E0CBD74EAE486245ECA /* Pods-DeckView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8069B6207904863361ADDF49955DF424 /* Pods-DeckView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CAD2E9CD64B9549B1CFC1DEC1A5B5DB /* Pods-DeckView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3B60AE439B1BD99F64DBD8853EE31E0 /* Pods-DeckView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7855574FD2B849AE5220DC1EC94BB4E0 /* Pods-DeckView_Example-dummy.m */; };
@@ -39,38 +42,41 @@
 /* Begin PBXFileReference section */
 		2CAD2E9CD64B9549B1CFC1DEC1A5B5DB /* Pods-DeckView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeckView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		30A03857D4760A1E52E386E06109CA24 /* Pods-DeckView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeckView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		33D5A63E2806E9056E68E3FA716B8C6E /* DeckView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = DeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		33D5A63E2806E9056E68E3FA716B8C6E /* DeckView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = DeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3A44ECA161021AF008F181564DF1735F /* DeckView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeckView.xcconfig; sourceTree = "<group>"; };
 		40193E88BEF60199D7C1EA8CFCCF1C8B /* DeckView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeckView-umbrella.h"; sourceTree = "<group>"; };
+		43F94933219EA64900C7AE7D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		43F94934219EA64900C7AE7D /* CardViewsPull.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewsPull.swift; sourceTree = "<group>"; };
+		43F94935219EA64900C7AE7D /* DeckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
+		43F94936219EA64900C7AE7D /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		48C38C89EBB1AE3823674C3ECABA700C /* Pods-DeckView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeckView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		491C85E302624BE7D56AB3C74D2BC4A3 /* Pods-DeckView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeckView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		579C3F6DDAE17DAB837F56853A5895E8 /* Pods-DeckView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeckView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5875863F95AAD9B5D6B5BAEA466BC37D /* DeckView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeckView-prefix.pch"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5F2CB92C627FDD68E45808523D90A36E /* Pods_DeckView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeckView_Tests.framework; path = "Pods-DeckView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2CB92C627FDD68E45808523D90A36E /* Pods_DeckView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeckView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E894D5B84255F5183B5A4BFCB5191F /* Pods-DeckView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeckView_Example.modulemap"; sourceTree = "<group>"; };
 		70F8319A796F5E0CBD74EAE486245ECA /* Pods-DeckView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeckView_Example-umbrella.h"; sourceTree = "<group>"; };
 		7855574FD2B849AE5220DC1EC94BB4E0 /* Pods-DeckView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeckView_Example-dummy.m"; sourceTree = "<group>"; };
 		7E10F177BE8EEAEAEC71D69BEAB4B08B /* Pods-DeckView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeckView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		84681025F8B694BE4E132BBF93D3A14B /* Pods-DeckView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeckView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8DEF8CC760FFA31C378808E6C3891F36 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = DeckView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		927CBEA58CDEF246BFE0F60C048CEA3F /* DeckView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeckView-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9637514DA078D69C09000DB2BB9CEEE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9637514DA078D69C09000DB2BB9CEEE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A6682A4CEF0CF2EE60FD0893B47DC8E2 /* Pods-DeckView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeckView_Tests-resources.sh"; sourceTree = "<group>"; };
 		A6E04D479D802B67BF36D0ACCD278F78 /* Pods-DeckView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeckView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B0D5D879D7457661E40D696041AB0BA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1D84ED6CB7D47936A92B3A2F4847D92 /* Pods-DeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B412B350ACCD2724C9F16407E4E77EB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF60F8E5354763BD9B90110B31ACC006 /* Pods_DeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeckView_Example.framework; path = "Pods-DeckView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF60F8E5354763BD9B90110B31ACC006 /* Pods_DeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25DCE26B642479671B2D56C6AA60F55 /* Pods-DeckView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeckView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C8EEE1B6AF2DF17C3BA6E635624C779B /* DeckView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeckView.framework; path = DeckView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8EEE1B6AF2DF17C3BA6E635624C779B /* DeckView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeckView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8F118AA078190C0CA834361B7BBB42C /* Pods-DeckView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DeckView_Tests.modulemap"; sourceTree = "<group>"; };
 		CA75EDFEC570E86A44EEBEB0469DC46B /* Pods-DeckView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeckView_Example-resources.sh"; sourceTree = "<group>"; };
 		CF006EAD32A9C8F87AF594EB45BC42A7 /* Pods-DeckView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeckView_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		D3B5A75F539D0356E52557CB06F12CA0 /* DeckView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DeckView.modulemap; sourceTree = "<group>"; };
 		D89D9372AAB40BC451F5C0749CAC7E34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E28DC9DFDF9A37BFFAA34ECF8A6E1EBA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E28DC9DFDF9A37BFFAA34ECF8A6E1EBA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E7A99444817DD90C79908F45D55CF8DF /* Pods-DeckView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeckView_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +134,18 @@
 			path = "Target Support Files/Pods-DeckView_Example";
 			sourceTree = "<group>";
 		};
+		43FE4905219EAE1F0021D01E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				43F94933219EA64900C7AE7D /* CardView.swift */,
+				43F94934219EA64900C7AE7D /* CardViewsPull.swift */,
+				43F94935219EA64900C7AE7D /* DeckView.swift */,
+				43F94936219EA64900C7AE7D /* Geometry.swift */,
+			);
+			name = Classes;
+			path = DeckView/Classes;
+			sourceTree = "<group>";
+		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +157,7 @@
 		68959D7EA68DC43F6DD9912CC21AAAF1 /* DeckView */ = {
 			isa = PBXGroup;
 			children = (
-				8DEF8CC760FFA31C378808E6C3891F36 /* ReplaceMe.swift */,
+				43FE4905219EAE1F0021D01E /* Classes */,
 				E220A06146CEF9401350173614047AF5 /* Pod */,
 				AA96B9C74E772C93E518E98B73A21EC3 /* Support Files */,
 			);
@@ -321,6 +339,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					7FA02E2DBE6E909B51B55C5B606F9F72 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -386,8 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F94937219EA64900C7AE7D /* CardView.swift in Sources */,
 				EA96ED95FA83D3E1DCB4B43D85484AE3 /* DeckView-dummy.m in Sources */,
-				6CB2A03FF7B8B45A6050130F97D3BC0E /* ReplaceMe.swift in Sources */,
+				43F94938219EA64900C7AE7D /* CardViewsPull.swift in Sources */,
+				43F94939219EA64900C7AE7D /* DeckView.swift in Sources */,
+				43F9493A219EA64900C7AE7D /* Geometry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A44ECA161021AF008F181564DF1735F /* DeckView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -617,7 +644,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DeckView/DeckView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DeckView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DeckView/DeckView.modulemap";
 				PRODUCT_MODULE_NAME = DeckView;
@@ -625,8 +652,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -662,8 +688,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -708,6 +733,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A44ECA161021AF008F181564DF1735F /* DeckView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -720,7 +746,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DeckView/DeckView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DeckView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DeckView/DeckView.modulemap";
 				PRODUCT_MODULE_NAME = DeckView;

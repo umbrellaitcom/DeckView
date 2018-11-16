@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DeckView'
   s.version          = '0.1.0'
-  s.summary          = 'An another Tinder like DeckView.'
+  s.summary          = 'Tinder like DeckView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-
-                       DESC
+  s.description      = 'Tinder like DeckView with the ability to loop cards'
 
   s.homepage         = 'https://github.com/umbrellaitcom/DeckView.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -30,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.swift_version    = '4.2'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'DeckView/Classes/**/*'
   
