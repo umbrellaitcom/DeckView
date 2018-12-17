@@ -1,15 +1,22 @@
 PODS:
-  - DeckView (0.1.0)
+  - DeckView (0.1.0):
+    - pop
+  - pop (1.0.12)
 
 DEPENDENCIES:
   - DeckView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - pop
 
 EXTERNAL SOURCES:
   DeckView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DeckView: 1516a31c7df765b1e5413a32708726a6ac97b7bf
+  DeckView: c726d76d63b8e311d44396ad3ead474b7937277f
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
 PODFILE CHECKSUM: d6afa26b86509c882f40469ee2ec09de638acc64
 

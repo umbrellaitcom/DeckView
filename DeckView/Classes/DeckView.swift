@@ -33,38 +33,25 @@ public class DeckView: UIView {
 
     private var cardViews: [CardView] = []
     private var cardViewsPull: CardViewsPull = CardViewsPull()
-    private var animator: UIViewPropertyAnimator? 
-
-    init() {
-        super.init(frame: .zero)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-	override public func didMoveToWindow() {
-        super.didMoveToWindow()
-
-        DispatchQueue.main.async {
-            self.reloadData()
-        }
-    }
+    private var animator: UIViewPropertyAnimator?
 
 	override public func layoutSubviews() {
         super.layoutSubviews()
 
         cardViews.enumerated().forEach { index, cardView in
+			cardView.isUserInteractionEnabled = index == 0
+
             let frame = frameForCardAt(position: index)
             cardView.bounds = CGRect(origin: .zero, size: frame.size)
             cardView.center = CGPoint(x: frame.origin.x + frame.size.width / 2,
                                       y: frame.origin.y + frame.size.height / 2)
+
+			let alpha = alphaForCardAt(position: index)
+			cardView.alpha = alpha
         }
     }
 
-    func frameForCardAt(position: Int) -> CGRect {
+    private func frameForCardAt(position: Int) -> CGRect {
         let size = cardSize
 
         let offset: CGFloat
@@ -81,18 +68,54 @@ public class DeckView: UIView {
         return CGRect(origin: origin, size: size)
     }
 
+	func index(for cardView: CardView) -> Int? {
+		guard let cardViewIndex = cardViews.firstIndex(of: cardView),
+			let currentCardIndex = currentCardIndex else {
+
+			return nil
+		}
+
+		var index: Int
+		index = currentCardIndex + cardViewIndex
+		if index >= countOfCards {
+			index = countOfCards - index
+		}
+
+		return index
+	}
+
+	func getTopCard() -> CardView? {
+		return cardViews.first
+	}
+
+	private func alphaForCardAt(position: Int) -> CGFloat {
+		switch position {
+		case 0:
+			return 1.0
+		case 1:
+			return 0.6
+		default:
+			return 0.0
+		}
+	}
+
 	override public func didMoveToSuperview() {
         super.didMoveToSuperview()
     }
 
+	func shouldDrag(card: CardView) -> Bool {
+		return countOfCards != 1
+	}
+
     func didBeginDrag(card: CardView) {
-        animator = UIViewPropertyAnimator(duration: 0.23, curve: .linear, animations: {
+        animator = UIViewPropertyAnimator(duration: 0.25, curve: .linear, animations: {
             self.cardViews.enumerated().forEach { index, cardView in
                 guard index != 0 else {
                     return
                 }
 
                 cardView.frame = self.frameForCardAt(position: index - 1)
+				cardView.alpha = self.alphaForCardAt(position: index - 1)
             }
         })
     }
@@ -154,7 +177,11 @@ public class DeckView: UIView {
         cardViews.append(card)
         insertSubview(card, at: 0)
 
-        setNeedsLayout()
+		card.alpha = 0.0
+
+		UIView.animate(withDuration: 0.23, animations: {
+			self.layoutIfNeeded()
+		})
     }
 
     func register(_ nib: UINib, forCardReuseIdentifier reuseIdentifier: String) {
@@ -169,14 +196,23 @@ public class DeckView: UIView {
         cardViews.forEach { $0.removeFromSuperview() }
         cardViews.removeAll()
 
-        guard let dataSource = dataSource else {
-            currentCardIndex = nil
-            countOfCards = 0
+		func dropState() {
+			currentCardIndex = nil
+			countOfCards = 0
+		}
 
+        guard let dataSource = dataSource else {
+			dropState()
             return
         }
 
         let newCountOfCards = dataSource.numberOfItems(in: self)
+
+		if newCountOfCards == 0 {
+			dropState()
+			return
+		}
+
         let newCurrentCardIndex: Int = {
             guard let currentCardIndex = currentCardIndex else {
                 return 0
@@ -216,12 +252,9 @@ public class DeckView: UIView {
         setNeedsLayout()
     }
 
-}
-
-fileprivate extension DeckView {
-
-    func setup() {
-        translatesAutoresizingMaskIntoConstraints = false
-    }
+	public func swipeToCard(at index: Int) {
+		currentCardIndex = index
+		reloadData()
+	}
 
 }

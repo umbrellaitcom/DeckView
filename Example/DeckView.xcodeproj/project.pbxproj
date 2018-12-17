@@ -236,12 +236,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeckView_Example/Pods-DeckView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DeckView/DeckView.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeckView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

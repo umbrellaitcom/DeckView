@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import pop
 
 public class CardView: UIView {
 
@@ -42,40 +43,54 @@ fileprivate extension CardView {
 
     var dragPercent: CGFloat {
         let dragDistance = currentCenter.distanceTo(center)
-        return min(dragDistance / (bounds.width / 4.0), 1.0)
+        return min(dragDistance / (frame.width / 3), 1.0)
     }
 
     func setup() {
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(sender: )))
+		recognizer.delegate = self
         addGestureRecognizer(recognizer)
     }
 
     @objc func didPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self)
 
-        switch sender.state {
-        case .began:
-            deckView?.didBeginDrag(card: self)
-        case .changed:
-            transform = CGAffineTransform(translationX: translation.x, y: translation.y)
-            
-            deckView?.didDrag(card: self, dragPercent: dragPercent)
-        case .ended, .cancelled:
-            let velocity = sender.velocity(in: self).distanceTo(.zero)
+		switch sender.state {
+		case .began:
+			deckView?.didBeginDrag(card: self)
+		case .changed:
+			var transform = CATransform3DIdentity
 
-            if velocity >= 500.0 || dragPercent == 1.0 {
-                swipeCard(animated: true)
-            } else {
-                resetPosition(animated: true)
-            }
+			let dragDistance = currentCenter.x - center.x
+			let rotationAngle = CGFloat.pi / 6.0 * min(dragDistance / (frame.width), 1.0)
+			transform = CATransform3DRotate(transform, rotationAngle, 0, 0, 1)
+			transform = CATransform3DTranslate(transform, translation.x, translation.y, 0)
 
-            deckView?.didEndDrag(card: self, shouldSwipe: dragPercent >= 1)
-        default:
-            break
-        }
+			layer.transform = transform
+
+			deckView?.didDrag(card: self, dragPercent: dragPercent)
+		case .ended, .cancelled:
+			let velocity = sender.velocity(in: self)
+
+			let vectorDirection = CGPoint(x: center.x - currentCenter.x, y: center.y - currentCenter.y)
+			let validDirection = (vectorDirection.x * velocity.x) < 0
+									&& (vectorDirection.y * velocity.y) < 0
+
+			var shouldSwipe = velocity.distanceTo(.zero) >= 500.0 || dragPercent == 1.0
+			if shouldSwipe && validDirection {
+				swipeCard(animated: true, velocity: velocity)
+				shouldSwipe = true
+			} else {
+				resetPosition(animated: true)
+			}
+
+			deckView?.didEndDrag(card: self, shouldSwipe: shouldSwipe && validDirection)
+		default:
+			break
+		}
     }
 
-    func swipeCard(animated: Bool) {
+	func swipeCard(animated: Bool, velocity: CGPoint) {
 
         guard let deckView = deckView else {
             resetPosition(animated: animated)
@@ -83,15 +98,15 @@ fileprivate extension CardView {
         }
 
          guard let finalCenter: CGPoint = {
-            let vector = (center, currentCenter)
+			let vector = (center, currentCenter)
 
-            var path = deckView.frame
+            var path = deckView.bounds
 
-            path.size.width += bounds.width
-            path.size.height += bounds.height
+            path.size.width += frame.width
+            path.size.height += frame.height
 
-            path.origin.x -= bounds.width / 2.0
-            path.origin.y -= bounds.height / 2.0
+            path.origin.x -= frame.width / 2.0
+            path.origin.y -= frame.height / 2.0
 
             let topLeft = path.origin
             let topRight = CGPoint(x: path.origin.x + path.width, y: path.origin.y)
@@ -128,11 +143,14 @@ fileprivate extension CardView {
         finalOrigin.x -= deckView.frame.width / 2.0
         finalOrigin.y -= deckView.frame.height / 2.0
 
-        UIView.animate(withDuration: animated ? 0.25 : 0.0, delay: 0.0, options: [], animations: {
-            self.transform = CGAffineTransform(translationX: finalOrigin.x, y: finalOrigin.y)
-        }, completion: { finished in
-            deckView.didSwipe(card: self)
-        })
+		let translationAnimation = POPBasicAnimation(propertyNamed: kPOPLayerTranslationXY)
+		translationAnimation?.duration = 0.35
+		translationAnimation?.fromValue = NSValue(cgPoint: POPLayerGetTranslationXY(layer))
+		translationAnimation?.toValue = NSValue(cgPoint: finalOrigin)
+		translationAnimation?.completionBlock = { _, _ in
+			deckView.didSwipe(card: self)
+		}
+		layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
     }
 
     func resetPosition(animated: Bool) {
@@ -141,5 +159,17 @@ fileprivate extension CardView {
             self.transform = .identity
         })
     }
+
+}
+
+extension CardView: UIGestureRecognizerDelegate {
+
+	public override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+		if !(deckView?.shouldDrag(card: self) ?? false) {
+			return false
+		}
+
+		return super.gestureRecognizerShouldBegin(gestureRecognizer)
+	}
 
 }

@@ -19,7 +19,10 @@ class CardViewsPull {
     }
 
     fileprivate func makeView(withIdentifier reuseIdentifier: String) -> CardView {
-        let view = nibs[reuseIdentifier]?.instantiate(withOwner: nil, options: nil).first
+		let view = nibs[reuseIdentifier]?.instantiate(withOwner: nil, options: nil).first {
+			$0 is CardView
+		}
+
         guard let cardView = view as? CardView else {
             fatalError("Unable to dequeue reusable card with reuse identifier: \(reuseIdentifier)")
         }
