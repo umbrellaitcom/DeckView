@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'DeckView'
+  s.name             = 'UMDeckView'
   s.version          = '0.1.0'
   s.summary          = 'Tinder like DeckView.'
 

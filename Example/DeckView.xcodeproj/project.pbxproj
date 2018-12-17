@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		0A56425A989714D36423F087 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0FF6CA799EDE83C055A7376D /* Pods_DeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24B140B1B851BDC45B42B8DF /* DeckView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DeckView.podspec; path = ../DeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24B140B1B851BDC45B42B8DF /* UMDeckView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UMDeckView.podspec; path = ../UMDeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3543FCF12A6DCAA256DCBE79 /* Pods-DeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeckView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeckView_Example/Pods-DeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DeckView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				24B140B1B851BDC45B42B8DF /* DeckView.podspec */,
+				24B140B1B851BDC45B42B8DF /* UMDeckView.podspec */,
 				87DE8238BD88ADF02F57FFF9 /* README.md */,
 				0A56425A989714D36423F087 /* LICENSE */,
 			);
