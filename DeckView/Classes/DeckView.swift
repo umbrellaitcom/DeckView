@@ -17,15 +17,15 @@ public protocol DeckViewDataSource: class {
 
 public class DeckView: UIView {
 
-    weak var dataSource: DeckViewDataSource?
+    public weak var dataSource: DeckViewDataSource?
 
-    var cardSize: CGSize = CGSize(width: 300.0, height: 400.0) {
+    public var cardSize: CGSize = CGSize(width: 300.0, height: 400.0) {
         didSet {
             setNeedsLayout()
         }
     }
 
-    var isLooped: Bool = true
+    public var isLooped: Bool = true
 
     private(set) var maxNumberOfVisibleCards: Int = 3
     private(set) var countOfCards: Int = 0
@@ -68,7 +68,7 @@ public class DeckView: UIView {
         return CGRect(origin: origin, size: size)
     }
 
-	func index(for cardView: CardView) -> Int? {
+	public func index(for cardView: CardView) -> Int? {
 		guard let cardViewIndex = cardViews.firstIndex(of: cardView),
 			let currentCardIndex = currentCardIndex else {
 
@@ -84,7 +84,7 @@ public class DeckView: UIView {
 		return index
 	}
 
-	func getTopCard() -> CardView? {
+	public func getTopCard() -> CardView? {
 		return cardViews.first
 	}
 
@@ -184,15 +184,15 @@ public class DeckView: UIView {
 		})
     }
 
-    func register(_ nib: UINib, forCardReuseIdentifier reuseIdentifier: String) {
+    public func register(_ nib: UINib, forCardReuseIdentifier reuseIdentifier: String) {
         cardViewsPull.register(nib, forCardReuseIdentifier: reuseIdentifier)
     }
 
-    func dequeueReusableCard(withIdentifier reuseIdentifier: String) -> CardView {
+    public func dequeueReusableCard(withIdentifier reuseIdentifier: String) -> CardView {
         return cardViewsPull.dequeueReusebleCard(withIdentifier: reuseIdentifier)
     }
 
-    func reloadData() {
+    public func reloadData() {
         cardViews.forEach { $0.removeFromSuperview() }
         cardViews.removeAll()
 
