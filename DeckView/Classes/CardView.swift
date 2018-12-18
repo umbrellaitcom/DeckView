@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import pop
 
-public class CardView: UIView {
+open class CardView: UIView {
 
     fileprivate var deckView: DeckView? {
         return superview as? DeckView
     }
 
-    public init() {
+	public init() {
         super.init(frame: .zero)
 
         setup()
@@ -164,7 +164,7 @@ fileprivate extension CardView {
 
 extension CardView: UIGestureRecognizerDelegate {
 
-	public override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+	open override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
 		if !(deckView?.shouldDrag(card: self) ?? false) {
 			return false
 		}
