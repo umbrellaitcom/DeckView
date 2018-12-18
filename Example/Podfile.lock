@@ -1,23 +1,23 @@
 PODS:
-  - DeckView (0.1.0):
-    - pop
   - pop (1.0.12)
+  - UMDeckView (0.1.3):
+    - pop
 
 DEPENDENCIES:
-  - DeckView (from `../`)
+  - UMDeckView (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - pop
 
 EXTERNAL SOURCES:
-  DeckView:
+  UMDeckView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DeckView: c726d76d63b8e311d44396ad3ead474b7937277f
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  UMDeckView: 1f4b9316f289a6e1934b0c1c27927bea614d6bd9
 
-PODFILE CHECKSUM: d6afa26b86509c882f40469ee2ec09de638acc64
+PODFILE CHECKSUM: a56be93de291f761fb2355327bf4120203c85e0f
 
 COCOAPODS: 1.5.3

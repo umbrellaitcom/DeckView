@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20717471B9FEABDECA702F00 /* Pods_DeckView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF6CA799EDE83C055A7376D /* Pods_DeckView_Example.framework */; };
+		43D299AC21C9359100F80D3D /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D299AB21C9359100F80D3D /* MyCardView.swift */; };
+		43FBA4F421C9191D004BCA66 /* MyCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FBA4F321C9191D004BCA66 /* MyCardView.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		0FF6CA799EDE83C055A7376D /* Pods_DeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B140B1B851BDC45B42B8DF /* UMDeckView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UMDeckView.podspec; path = ../UMDeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3543FCF12A6DCAA256DCBE79 /* Pods-DeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeckView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeckView_Example/Pods-DeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		43D299AB21C9359100F80D3D /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
+		43FBA4F321C9191D004BCA66 /* MyCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCardView.xib; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DeckView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				43FBA4F321C9191D004BCA66 /* MyCardView.xib */,
+				43D299AB21C9359100F80D3D /* MyCardView.swift */,
 			);
 			name = "Example for DeckView";
 			path = DeckView;
@@ -144,7 +150,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				16CABFDAAE525E7AD264F395 /* [CP] Embed Pods Frameworks */,
+				17E67C05016C28C61177A7E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,6 +203,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				43FBA4F421C9191D004BCA66 /* MyCardView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,7 +233,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		16CABFDAAE525E7AD264F395 /* [CP] Embed Pods Frameworks */ = {
+		17E67C05016C28C61177A7E8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,14 +242,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DeckView_Example/Pods-DeckView_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DeckView/DeckView.framework",
+				"${BUILT_PRODUCTS_DIR}/UMDeckView/UMDeckView.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeckView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UMDeckView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D299AC21C9359100F80D3D /* MyCardView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -390,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3A42PGL7M3;
 				INFOPLIST_FILE = DeckView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -407,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3A42PGL7M3;
 				INFOPLIST_FILE = DeckView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
