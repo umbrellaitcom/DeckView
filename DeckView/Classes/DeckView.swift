@@ -27,9 +27,9 @@ open class DeckView: UIView {
 
     open var isLooped: Bool = true
 
-    private(set) var maxNumberOfVisibleCards: Int = 3
-    private(set) var countOfCards: Int = 0
-    private(set) var currentCardIndex: Int?
+    open private(set) var maxNumberOfVisibleCards: Int = 3
+    open private(set) var countOfCards: Int = 0
+    open private(set) var currentCardIndex: Int?
 
     private var cardViews: [CardView] = []
     private var cardViewsPull: CardViewsPull = CardViewsPull()
