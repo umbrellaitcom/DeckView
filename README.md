@@ -1,7 +1,7 @@
 # UMDeckView
 `UMDeckView` is an easy-to-use Swift library that provides a deck of views that can be swiped any side (inspired by the Tinder app).
 
-![](demo.gif)
+![](https://github.com/umbrellaitcom/DeckView/blob/master/Example/demo.gif)
 
 [![Version](https://img.shields.io/cocoapods/v/UMDeckView.svg?style=flat)](http://cocoapods.org/pods/UMDeckView)
 [![License](https://img.shields.io/cocoapods/l/UMDeckView.svg?style=flat)](http://cocoapods.org/pods/UMDeckView)
