@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		20717471B9FEABDECA702F00 /* Pods_DeckView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF6CA799EDE83C055A7376D /* Pods_DeckView_Example.framework */; };
 		43D299AC21C9359100F80D3D /* MyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D299AB21C9359100F80D3D /* MyCardView.swift */; };
+		43E1AF9F21D28F4B001BAF99 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43E1AF9E21D28F4B001BAF99 /* demo.gif */; };
 		43FBA4F421C9191D004BCA66 /* MyCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FBA4F321C9191D004BCA66 /* MyCardView.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		24B140B1B851BDC45B42B8DF /* UMDeckView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UMDeckView.podspec; path = ../UMDeckView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3543FCF12A6DCAA256DCBE79 /* Pods-DeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeckView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeckView_Example/Pods-DeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		43D299AB21C9359100F80D3D /* MyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardView.swift; sourceTree = "<group>"; };
+		43E1AF9E21D28F4B001BAF99 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		43FBA4F321C9191D004BCA66 /* MyCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCardView.xib; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* DeckView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeckView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				24B140B1B851BDC45B42B8DF /* UMDeckView.podspec */,
 				87DE8238BD88ADF02F57FFF9 /* README.md */,
 				0A56425A989714D36423F087 /* LICENSE */,
+				43E1AF9E21D28F4B001BAF99 /* demo.gif */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				43FBA4F421C9191D004BCA66 /* MyCardView.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				43E1AF9F21D28F4B001BAF99 /* demo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

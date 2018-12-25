@@ -1,6 +1,8 @@
 # UMDeckView
 `UMDeckView` is an easy-to-use Swift library that provides a deck of views that can be swiped any side (inspired by the Tinder app).
 
+![](demo.gif)
+
 [![Version](https://img.shields.io/cocoapods/v/UMDeckView.svg?style=flat)](http://cocoapods.org/pods/UMDeckView)
 [![License](https://img.shields.io/cocoapods/l/UMDeckView.svg?style=flat)](http://cocoapods.org/pods/UMDeckView)
 [![Platform](https://img.shields.io/cocoapods/p/UMDeckView.svg?style=flat)](http://cocoapods.org/pods/UMDeckView)
@@ -27,21 +29,20 @@ If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 ```swift
 class ViewController: UIViewController, DeckViewDataSource {
 
-@IBOutlet weak var deckView: DeckView!
+    @IBOutlet weak var deckView: DeckView!
 
-override func viewDidLoad() {
-super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-// Register nib containing subclass of CardView
-let nib = UINib(nibName: "MyCardView", bundle: nil)
-deckView.register(nib, forCardReuseIdentifier: "MyCardView")
+        // Register nib containing subclass of CardView
+        let nib = UINib(nibName: "MyCardView", bundle: nil)
+        deckView.register(nib, forCardReuseIdentifier: "MyCardView")
 
 
-// Set the deckView's delegate & data source.
-deckView.delegate = self
-deckView.dataSource = self
-
-}
+        // Set the deckView's delegate & data source.
+        deckView.delegate = self
+        deckView.dataSource = self
+    }
 }
 ```
 
@@ -49,16 +50,16 @@ deckView.dataSource = self
 
 ```swift
 func numberOfItems(in deckView: DeckView) -> Int {
-return 3
+    return 3
 }
 ```
 
 3) Create your cards as you would do with `UITableViewCell`. Your cards must inherit `CardView`.
 ```swift
 func deckView(_ deckView: DeckView, cardForCellAt index: Int) -> CardView {
-let card = deckView.dequeueReusableCard(withIdentifier: "MyCardView")
-card.backgroundColor = UIColor.random()
-return card
+    let card = deckView.dequeueReusableCard(withIdentifier: "MyCardView")
+    card.backgroundColor = UIColor.random()
+    return card
 }
 ```
 
